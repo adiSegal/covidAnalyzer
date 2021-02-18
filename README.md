@@ -18,3 +18,10 @@ to run queries:
     npm run lifeExpectancy
 note that these queries get a connection to the DB, so once the DB is done loading, they can run regardless of the app.
 
+TODO:
+1. cover all queries with tests
+2. make csv file read from URL as batch process-
+   have a few separate calls to the csv, each one working on a different part of the file
+3. There is no need to load the huge csv into the DB from scratch every time. Incremental loud should suffice.
+4. Add typeScript support
+5. Add config file
