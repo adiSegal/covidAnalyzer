@@ -1,0 +1,23 @@
+{
+  "name": "covid-analysis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "nodeplotlib": "^0.7.3",
+    "promise-mysql": "^5.0.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "scripts": {
+    "countryDailyCases": "node -e 'require(\"./Queries.js\").countryDailyCases()' $*",
+    "totalCasesForEveryCountry": "node -e 'require(\"./Queries.js\").totalCasesForEveryCountry()'",
+    "lifeExpectancy": "node -e 'require(\"./Queries.js\").lifeExpectancy()'"
+  },
+  "author": "Adi Segal",
+  "license": "ISC"
+}
