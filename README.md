@@ -4,7 +4,7 @@ Load covid-19 data from URL, load to a DB an analyse
 Install the app:
 run npm i
 
-run the app- get the latest csv from the URL and persist it in the DB:
+run the app: get the latest csv from the URL and persist it in the DB:
 node index.js
 The app will print "All items stored into database successfully" once the DB is done loading.
 
