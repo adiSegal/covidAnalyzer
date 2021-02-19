@@ -1,14 +1,14 @@
-const mysql = require("promise-mysql");
+import mysql from "promise-mysql";
 
 let con;
 
 // Database credentials - should move into config file!
-const hostname = "remotemysql.com",
-  username = "owNtMDmNrM",
+const host = "remotemysql.com",
+  user = "owNtMDmNrM",
   password = "eRmLcsyCDQ",
-  databsename = "owNtMDmNrM";
+  database = "owNtMDmNrM";
 
-const initDb = async function () {
+export const initDb = async function () {
   // Establish connection to the database
   con = await connectToDb();
   try {
@@ -34,14 +34,14 @@ const initDb = async function () {
   return con;
 };
 
-const connectToDb = async function () {
+export const connectToDb = async function () {
   if (!con || con.state === "disconnected") {
     // Establish connection to the database
     con = await mysql.createConnection({
-      host: hostname,
-      user: username,
-      password: password,
-      database: databsename,
+      host,
+      user,
+      password,
+      database,
     });
 
     console.log("successfully connected to Db.");
@@ -49,18 +49,11 @@ const connectToDb = async function () {
   }
 };
 
-const getDbConnection = function () {
+export const getDbConnection = function () {
   return con;
 };
 
-const disconnectFromDb = function() {
+export const disconnectFromDb = function() {
     const connection = getDbConnection();
     connection.end();
-}
-
-module.exports = {
-  initDb,
-  connectToDb,
-  getDbConnection,
-  disconnectFromDb
 };
