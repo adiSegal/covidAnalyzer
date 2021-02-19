@@ -1,5 +1,5 @@
-const { connectToDb, initDb, disconnectFromDb } = require("./Dao.js");
-const { insertCsvIntoDb, getCsvFromUrl } = require("./CsvHandler.js");
+import { connectToDb, initDb, disconnectFromDb } from './Dao.js';
+import { insertCsvIntoDb, getCsvFromUrl } from './CsvHandler.js';
 
 const CSV_URL = "https://covid.ourworldindata.org/data/owid-covid-data.csv";
 
