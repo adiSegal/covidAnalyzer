@@ -7,3 +7,5 @@ config.db = {
   password: "eRmLcsyCDQ",
   database: "owNtMDmNrM"
 };
+
+config.csvUrl = "https://covid.ourworldindata.org/data/owid-covid-data.csv";
