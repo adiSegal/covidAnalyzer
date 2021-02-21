@@ -26,4 +26,3 @@ TODO:
    have a few separate calls to the csv, each one working on a different part of the file
 3. There is no need to load the huge csv into the DB from scratch every time. Incremental loud should suffice.
 4. Add typeScript support
-5. Add config file
