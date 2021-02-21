@@ -1,7 +1,7 @@
-import { initializeCovidDb } from './CovidAnalyzer.js';
-
-const CSV_URL = "https://covid.ourworldindata.org/data/owid-covid-data.csv";
+import { initializeCovidDb } from "./CovidAnalyzer.js";
+import { config } from "./config";
 
 (async () => {
-  initializeCovidDb(CSV_URL);
+  const csvUrl = config.csvUrl;
+  await initializeCovidDb(csvUrl);
 })();
