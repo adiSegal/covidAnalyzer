@@ -21,7 +21,7 @@ export const initDb = async function () {
     console.warn(e);
   }
   const createCasesStatament =
-    "CREATE TABLE cases( iso_code CHAR(8), location CHAR(30), date DATE, total_cases INT, new_cases INT )";
+    "CREATE TABLE cases( iso_code CHAR(8), location CHAR(50), date DATE, total_cases INT, new_cases INT )";
   const createCounriesMdStatament =
     "CREATE TABLE countries_metadata( iso_code CHAR(8), life_expectancy FLOAT, human_development_index FLOAT )";
 
