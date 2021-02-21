@@ -5,6 +5,7 @@ Install the app:
 run npm i
 
 run the app: get the latest csv from the URL and persist it in the DB:
+
 node -r esm index.js
 The app will print "All items stored into database successfully" once the DB is done loading.
 
